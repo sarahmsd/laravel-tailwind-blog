@@ -64,6 +64,16 @@ class PostController extends Controller
     }
 
     /**
+     * Display the specified resource.
+     */
+    public function details($id)
+    {
+        $post = Post::find($id);
+        
+        return view('post.details', compact('post'));
+    }
+
+    /**
      * Show the form for editing the specified resource.
      */
     public function edit(Post $post)

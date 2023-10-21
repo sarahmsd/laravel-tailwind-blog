@@ -23,7 +23,7 @@
                     </div>
                     <div class="my-4">
                         <x-input-label for="content" :value="__('Contenu')" />
-                        <textarea name="content" id="content" class="block mt-1 w-full bg-transparent rounded-md" ></textarea>
+                        <textarea d="markdown-editor" name="content" id="content" class="block mt-1 w-full bg-transparent rounded-md" ></textarea>
                     </div>
 
                     <div class="my-4">
