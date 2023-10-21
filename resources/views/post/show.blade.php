@@ -13,7 +13,7 @@
                 <div class="grid items-center m-auto">
                     <img src="{{asset('/storage//'.$post->image)}}" alt="" srcset="">
                 </div>
-                <p>{{$post->content}}</p>
+                <p>{!! $post->content !!}</p>
             </div>
         </div>
     </div>

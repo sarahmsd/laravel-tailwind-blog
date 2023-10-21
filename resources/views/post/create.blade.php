@@ -16,14 +16,11 @@
                     @csrf
                     <div class="my-4">
                         <x-input-label for="title" :value="__('Title')" />
-                        <x-text-input id="title" class="block mt-1 w-full" type="text" name="title" autofocus />
-                        @if (false)
-                            <span class="block text-red-500">{{$errors->title}}</span>
-                        @endif
+                        <x-text-input id="title" class="block mt-1 w-full" type="text" name="title" autofocus />                        
                     </div>
                     <div class="my-4">
                         <x-input-label for="content" :value="__('Contenu')" />
-                        <textarea d="markdown-editor" name="content" id="content" class="block mt-1 w-full bg-transparent rounded-md" ></textarea>
+                        <textarea id="note" name="content" class="form-control" rows="3" placeholder="Contenu" required>{{ isset($protocol) ? $protocol->Note : ''}}</textarea>
                     </div>
 
                     <div class="my-4">

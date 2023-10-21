@@ -18,7 +18,7 @@
                                     {{ $post->title }}
 								</a>
                                 <p class="mt-2 text-gray-600">
-									{{ Str::limit($post->content, 250) }}
+									{!! Str::limit($post->content, 450) !!}
 								</p>
                             </div>
                             <div class="flex items-center justify-between mt-4">

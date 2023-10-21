@@ -17,14 +17,11 @@
                     @method('put')
                     <div class="my-4">
                         <x-input-label for="title" :value="_('Title')" />
-                        <x-text-input id="title" class="block mt-1 w-full" type="text" name="title" value="{{$post->title}}" autofocus />
-                        @if (false)
-                            <span class="block text-red-500">{{$errors->title}}</span>
-                        @endif
+                        <x-text-input id="title" class="block mt-1 w-full" type="text" name="title" value="{{$post->title}}" autofocus />                        
                     </div>
                     <div class="my-4">
                         <x-input-label for="content" :value="__('Contenu')" />
-                        <textarea name="content" id="content" class="block text-white mt-1 w-full bg-transparent rounded-md">{{$post->content}}</textarea>
+                        <textarea id="note" name="content" class="form-control" rows="3" placeholder="Contenu" required>{!! $post->content !!}</textarea>
                     </div>
 
                     <div class="my-4">
